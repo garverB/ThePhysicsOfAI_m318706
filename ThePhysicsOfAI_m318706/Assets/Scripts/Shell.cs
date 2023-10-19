@@ -7,9 +7,9 @@ public class Shell : MonoBehaviour
     public GameObject explosion;
     float speed = 0.0f;
     float yspeed = 0.0f;
-    float mass = 10;
-    float force = 3;
-    float drag = 1;
+    float mass = 30.0f;
+    float force = 4.0f;
+    float drag = 1.0f;
     float gravity = -9.8f;
     float gAccel;
     float acceleration;
@@ -28,7 +28,7 @@ public class Shell : MonoBehaviour
     void Start()
     {
         acceleration = force / mass;
-        speed += acceleration * 1;
+        speed += acceleration * 1.0f;
         gAccel = gravity / mass;
     }
 
@@ -37,7 +37,7 @@ public class Shell : MonoBehaviour
     {
         speed *= (1 - Time.deltaTime * drag);
         yspeed += gAccel * Time.deltaTime;
-        this.transform.Translate(0.0f, yspeed, Time.deltaTime * speed);
+        this.transform.Translate(0.0f, yspeed, speed);
     }
 }
 
