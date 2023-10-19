@@ -61,7 +61,11 @@
     <Compile Include="Assets\Script\UpdateMove.cs" />
     <Compile Include="Assets\Script\SecondsUpdate.cs" />
     <Compile Include="Assets\Script\LateUpdateMove.cs" />
+    <Compile Include="Assets\Scripts\MoveShell.cs" />
     <Compile Include="Assets\Script\FixedUpdateMove.cs" />
+    <Compile Include="Assets\Scripts\DestroyShell.cs" />
+    <Compile Include="Assets\Scripts\Shell.cs" />
+    <Compile Include="Assets\Scripts\Drive.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
