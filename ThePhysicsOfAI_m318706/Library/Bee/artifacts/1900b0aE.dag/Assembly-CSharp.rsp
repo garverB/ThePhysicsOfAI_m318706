@@ -358,6 +358,7 @@
 "Assets/Script/UpdateMove.cs"
 "Assets/Scripts/DestroyShell.cs"
 "Assets/Scripts/Drive.cs"
+"Assets/Scripts/FireShell.cs"
 "Assets/Scripts/MoveShell.cs"
 "Assets/Scripts/Shell.cs"
 -langversion:9.0

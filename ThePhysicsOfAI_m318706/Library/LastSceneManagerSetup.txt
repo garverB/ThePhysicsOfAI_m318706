@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Bullet.unity
+- path: Assets/Tanks.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
