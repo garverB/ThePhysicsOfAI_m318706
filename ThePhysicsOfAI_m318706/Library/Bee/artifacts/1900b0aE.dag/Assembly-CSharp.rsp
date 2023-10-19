@@ -356,6 +356,7 @@
 "Assets/Script/LateUpdateMove.cs"
 "Assets/Script/SecondsUpdate.cs"
 "Assets/Script/UpdateMove.cs"
+"Assets/Scripts/AIShell.cs"
 "Assets/Scripts/DestroyShell.cs"
 "Assets/Scripts/Drive.cs"
 "Assets/Scripts/FireShell.cs"

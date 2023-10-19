@@ -7,6 +7,7 @@ public class FireShell : MonoBehaviour {
     public GameObject bullet;
     public GameObject turret;
     public GameObject enemy;
+    float rotSpeed = 2.0f;
 
     void CreateBullet() {
 
@@ -15,19 +16,21 @@ public class FireShell : MonoBehaviour {
 
     void Update() {
 
-
-        if (Input.GetKeyDown(KeyCode.Space)) {
-
-            Vector3 aimAt = CalculateTrajectory();
-            if (aimAt != Vector3.zero) {
-
-                this.transform.forward = CalculateTrajectory();
-                CreateBullet();
-            }
+        Vector3 direction = (enemy.transform.position - this.transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, lookRotation, Time.deltaTime * rotSpeed);
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            CreateBullet();
         }
+        
     }
+    
+}
 
-    Vector3 CalculateTrajectory() {
+    
+
+/*  Vector3 CalculateTrajectory() {
 
         Vector3 p = enemy.transform.position - this.transform.position;
         Vector3 v = enemy.transform.forward * enemy.GetComponent<Drive>().speed;
@@ -54,4 +57,4 @@ public class FireShell : MonoBehaviour {
         }
         return t * p + v;
     }
-}
+ */
